@@ -1,0 +1,90 @@
+[
+  {
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+      "name": "History",
+      "slug": "history"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Safety Innovations",
+      "slug": "safety"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Materials & Performance",
+      "slug": "materials"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 4,
+    "fields": {
+      "name": "Hybrid Evolution",
+      "slug": "hybrid"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+      "title": "From Steam Dreams to Motor Scenes: A Whimsical History of Cars",
+      "slug": "history-of-cars",
+      "category": 1,
+      "excerpt": "Take a quirky journey from steam‑powered contraptions to the Model T and beyond.",
+      "content": "<p>Imagine a time when roads were nothing more than rutted tracks and horses looked at clanking contraptions with suspicion. The idea of a self‑propelled carriage captivated inventors in the late 1700s, and by the 1770s steam‑powered vehicles were sputtering along like kettle on wheels. These early experiments were noisy, heavy and often unreliable, but the seed of mobility was planted.</p>\n\n<p>By the 1880s, inventors were racing to build practical cars. Steam, gasoline and electricity all vied for dominance. According to the Smithsonian Institution, by the 1890s Europeans were buying cars made by Benz, Daimler and Panhard while Americans patronized Duryea, Haynes and Winton【479313618709181†L65-L73】. Steam still had fans, but it was gasoline that took the lead because it allowed drivers to venture farther without frequent stops for fuel【479313618709181†L73-L75】.</p>\n\n<p>The game‑changer arrived in 1908 when Henry Ford introduced the Model&nbsp;T. Built between 1908 and 1927, this sturdy, practical car could twist over bumps and cost less than its rivals. So popular was the Model&nbsp;T that Ford sold over 15&nbsp;million units, offering only black paint between 1915 and 1925 because it dried fastest【479313618709181†L116-L123】. Farmers, factory workers and school teachers abandoned horses for this inexpensive mechanical marvel.</p>\n\n<p>From there, the automobile evolved rapidly. Electric starters made gas engines easier to use, while paved roads and cheap crude oil helped gas cars dominate the 20th century. Yet the story doesn’t end with gasoline: as you’ll see in our hybrid history section, electricity is staging a comeback.</p>\n\n<p class=\"footnotes\">[1] Source: Smithsonian Institution – Early Cars: Fact Sheet for Kids【479313618709181†L65-L75】. [2] Source: Smithsonian Institution – Ford Model&nbsp;T【479313618709181†L116-L123】.</p>",
+      "status": "published",
+      "created_at": "2025-12-17T00:00:00Z",
+      "updated_at": "2025-12-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "title": "Seat Belts, Air Bags and Beyond: Safety Innovations That Save Lives",
+      "slug": "safety-innovations",
+      "category": 2,
+      "excerpt": "Discover how clever engineers turned rickety rides into safe havens with belts, bags and brains.",
+      "content": "<p>For decades cars were more adventurous than safe. Drivers clung to steering wheels and hoped for the best. In the 1950s Volvo engineer Nils Bohlin changed that by perfecting the three‑point safety belt. Introduced as standard equipment on the 1959 PV544, Bohlin’s design secured both upper and lower body and was so effective that Volvo gave the patent away for free; today it’s credited with saving more than a million lives【191219850968999†L14-L31】.</p>\n\n<p>Seat belts were just the beginning. The U.S. National Highway Traffic Safety Administration notes that air bags, first invented in the 1950s and widely adopted by 1987, have saved more than 50,000 lives【211553481386159†L112-L119】. Modern air bags deploy in fractions of a second and include side and curtain bags to protect occupants from multiple angles. Pretensioners tighten seat belts before a crash, and advanced designs reduce injuries from the bag itself.</p>\n\n<p>Electronic stability control (ESC) arrived in the 1990s and became mandatory on new cars in 2011. This technology uses computer‑controlled braking to reduce spin‑outs and plow‑outs, helping drivers regain control when things get slippery【211553481386159†L123-L129】. Backup cameras, required since 2018, show what’s behind the vehicle and widen the field of view【211553481386159†L131-L140】, while blind‑spot warnings use sensors to alert drivers when it’s unsafe to merge【211553481386159†L142-L148】.</p>\n\n<p>Today’s cars are also learning to think for themselves. Driver assistance features such as forward collision warnings, automatic emergency braking and adaptive cruise control watch the road and react faster than any human【211553481386159†L154-L159】. These systems are the stepping stones toward fully automated driving. Thanks to decades of research and regulation, the average 2012 vehicle has a 56&nbsp;percent lower fatality risk than cars from the late 1950s【211553481386159†L161-L164】—proof that safety technology works.</p>\n\n<p class=\"footnotes\">[1] Source: Volvo Cars – Debunking 7 myths around safety belts【191219850968999†L14-L31】. [2] Source: NHTSA – How Vehicle Safety Has Improved Over the Decades【211553481386159†L104-L140】.</p>",
+      "status": "published",
+      "created_at": "2025-12-17T00:00:00Z",
+      "updated_at": "2025-12-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+      "title": "Metal Alchemy: How Lightweight Materials Boost Performance",
+      "slug": "materials-and-performance",
+      "category": 3,
+      "excerpt": "From high‑strength steel to carbon fibre composites, discover how modern alchemists transform metals into performance and efficiency.",
+      "content": "<p>Early cars were built like locomotives: heavy iron frames, thick steel panels and engines that weighed as much as a small horse. That heft made them durable but thirsty at the fuel pump. Engineers soon realized that shaving weight was the easiest way to make cars faster and more efficient. The U.S. Department of Energy notes that reducing vehicle mass by 10&nbsp;percent can improve fuel economy by 6–8&nbsp;percent【592831732152434†L138-L148】. Replacing cast iron and traditional steel with high‑strength steel, magnesium, aluminium and carbon‑fibre composites can cut body weight by up to 50&nbsp;percent【592831732152434†L140-L157】.</p>\n\n<p>Lightweighting doesn’t mean sacrificing strength. Modern aluminium alloys can absorb twice as much crash energy as conventional steel while weighing 40&nbsp;percent less【220536597028191†L85-L91】. In the lower crank case of an engine, swapping cast iron for aluminium cuts weight from about 45 pounds to just 18 pounds【220536597028191†L107-L115】. Cylinder blocks that once weighed 185 pounds now tip the scales at around 70 pounds thanks to aluminium construction with steel liners【220536597028191†L127-L137】. To make aluminium castings leak‑proof, manufacturers seal microscopic pores using vacuum impregnation—forcing polymer sealant into the metal under vacuum so fluids can’t seep out【220536597028191†L98-L124】. It’s like giving metal a waterproof jacket.</p>\n\n<p>The benefits extend beyond sports cars. Using lightweight materials allows automakers to add safety systems, batteries and hybrid components without bloating the vehicle【592831732152434†L151-L158】. For electric and hybrid vehicles, saving weight means a longer range or a smaller, cheaper battery【592831732152434†L155-L160】. As government fuel‑economy standards tighten, expect to see more carbon fibre hoods, magnesium seat frames and aluminium door panels gracing even the most modest family car.</p>\n\n<p class=\"footnotes\">[1] Source: U.S. Department of Energy – Lightweight Materials for Cars and Trucks【592831732152434†L138-L157】. [2] Source: Godfrey & Wing – How Vacuum Impregnation Enables Lightweighting【220536597028191†L85-L137】.</p>",
+      "status": "published",
+      "created_at": "2025-12-17T00:00:00Z",
+      "updated_at": "2025-12-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+      "title": "Hybrid Heroes: A Tale of Two Power Sources",
+      "slug": "hybrid-heroes",
+      "category": 4,
+      "excerpt": "From Ferdinand Porsche’s 1901 Mixte to today’s sophisticated power‑split hybrids, explore the evolution of hybrid vehicles.",
+      "content": "<p>The idea of blending different power sources dates back more than a century. In 1901 Ferdinand Porsche unveiled the Lohner–Porsche Mixte, the world’s first hybrid electric car, which used a gasoline engine to generate electricity for wheel‑hub motors【116687590894229†L207-L214】. It was a marvel of its time, but cheap gasoline and the arrival of Ford’s Model T soon pushed hybrids into obscurity.</p>\n\n<p>The concept resurfaced in the late 20th century. American engineer H.&nbsp;Piper proposed a hybrid car in 1904, but it wasn’t until the 1990s that hybrids gained serious momentum【173806693573398†L50-L56】. In 1993 the U.S. government launched the Partnership for a New Generation of Vehicles to develop an 80‑mpg supercar【173806693573398†L60-L71】. Four years later Toyota released the Prius, the first mass‑produced hybrid【116687590894229†L310-L316】. It became a celebrity darling and proved that hybrids weren’t just science projects.</p>\n\n<p>So how do modern hybrids work? A hybrid is simply a vehicle with two or more power sources. Toyota’s full hybrid system uses a petrol engine and an electric motor that can drive the wheels together or separately【25601092578678†L54-L63】. In parallel hybrids the electric motor merely assists the engine, while series hybrids use the engine only as a generator【25601092578678†L68-L79】. Toyota’s system also includes a generator, a power control unit and a power‑split device (a special planetary gearset) that blends power seamlessly【25601092578678†L82-L86】. The battery charges both via the engine and regenerative braking, capturing energy that would otherwise be lost as heat【25601092578678†L92-L123】.</p>\n\n<p>Today’s hybrids come in many flavours, from mild hybrids that provide a gentle boost to plug‑in hybrids like the Chevrolet Volt (the first commercially available plug‑in hybrid in 2010)【116687590894229†L352-L356】, which can drive on electricity alone for daily commutes. Advances in battery technology, power electronics and control software have made hybrids smoother, more reliable and more efficient than ever. And with dozens of hybrid and plug‑in models now on the market【116687590894229†L386-L387】, the two‑power‑source concept is here to stay.</p>\n\n<p class=\"footnotes\">[1] Source: U.S. Department of Energy – History of the Electric Car【116687590894229†L207-L214】【116687590894229†L310-L316】【116687590894229†L352-L356】【116687590894229†L386-L387】. [2] Source: USC – Hybrid Electric Vehicles: A History of Technological Innovation【173806693573398†L50-L71】. [3] Source: Toyota UK – How does Toyota Hybrid work?【25601092578678†L54-L86】【25601092578678†L92-L123】.</p>",
+      "status": "published",
+      "created_at": "2025-12-17T00:00:00Z",
+      "updated_at": "2025-12-17T00:00:00Z"
+    }
+  }
+]

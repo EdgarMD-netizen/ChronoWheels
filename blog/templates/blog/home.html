@@ -1,0 +1,72 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}ChronoWheels – Home{% endblock %}
+
+{% block content %}
+<!-- Hero section introducing the blog -->
+<div class="hero" id="home">
+    <div class="heroInner">
+        <div>
+            <div class="kicker"><span class="dot" aria-hidden="true"></span> Quirky automotive chronicles</div>
+            <h2>Exploring automotive evolution</h2>
+            <p>
+                ChronoWheels is a quirky blog delving into vehicle history, safety innovations,
+                materials science and hybrid technology. Buckle up for a ride through time and tech.
+            </p>
+            <div class="heroCtas">
+                <a class="cta ctaPrimary" href="#latest">📰 Browse latest posts</a>
+                {% for cat in categories %}
+                <a class="cta" href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <aside class="heroAside" aria-label="Highlights">
+            <div class="statGrid">
+                <div class="stat"><b>{{ posts|length }}</b><small>posts</small></div>
+                <div class="stat"><b>{{ categories|length }}</b><small>sections</small></div>
+                <div class="stat"><b>1</b><small>author</small></div>
+                <div class="stat"><b>Ads</b><small>ready slots</small></div>
+            </div>
+            <div class="ad" aria-label="Ad slot (hero sidebar)">
+                <div>
+                    <strong>Ad Slot</strong><br />300×250 / responsive
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<!-- Latest posts section -->
+<section id="latest" aria-labelledby="latestTitle">
+    <div class="sectionHead">
+        <div>
+            <h3 id="latestTitle">📰 Latest posts</h3>
+            <p>Read our most recent explorations into automotive history, safety, materials and hybrids.</p>
+        </div>
+    </div>
+    <div class="grid">
+        {% for post in posts %}
+        <article class="card mini">
+            <div class="cardInner">
+                <div class="meta">
+                    <span class="tag">{{ post.category.name }}</span>
+                    <span>{{ post.created_at|date:"M d, Y" }}</span>
+                </div>
+                <h4 class="title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                <p class="blurb">{{ post.excerpt|linebreaksbr }}</p>
+                <div class="cardFooter">
+                    <div class="meta"></div>
+                    <a class="read" href="{{ post.get_absolute_url }}">Read</a>
+                </div>
+            </div>
+        </article>
+        {% empty %}
+        <p>No posts have been published yet. Please check back later!</p>
+        {% endfor %}
+    </div>
+    <!-- Placeholder ad below the latest section -->
+    <div class="ad" style="margin-top:14px" aria-label="Ad slot (below latest)">
+        <div><strong>Ad Slot</strong><br />970×250 / responsive</div>
+    </div>
+</section>
+{% endblock %}

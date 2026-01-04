@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}ChronoWheels – {{ post.title }}{% endblock %}
+
+{% block content %}
+<article class="card full">
+    <div class="cardInner">
+        <div class="meta">
+            <span class="tag">{{ post.category.name }}</span>
+            <span>{{ post.created_at|date:"F j, Y" }}</span>
+        </div>
+        <h2 class="title">{{ post.title }}</h2>
+        <!-- Ad slot at top of post -->
+        <div class="ad" aria-label="Ad slot (post top)">
+            <div><strong>Ad Slot</strong><br />Responsive</div>
+        </div>
+        <div class="article post-body">
+            {{ post.content|safe }}
+        </div>
+        <!-- Ad slot at bottom of post -->
+        <div class="ad" aria-label="Ad slot (post bottom)">
+            <div><strong>Ad Slot</strong><br />Responsive</div>
+        </div>
+        <p style="margin-top:1rem"><a href="{% url 'blog:home' %}">← Back to home</a></p>
+    </div>
+</article>
+{% endblock %}

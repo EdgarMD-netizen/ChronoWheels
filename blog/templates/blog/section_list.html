@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}ChronoWheels – {{ category.name }}{% endblock %}
+
+{% block content %}
+<div class="sectionHead">
+    <div>
+        <h3>{{ category.name }}</h3>
+        <p>Posts filed under {{ category.name }}.</p>
+    </div>
+    <a class="btn" href="{% url 'blog:home' %}">← Back to home</a>
+</div>
+{% if posts %}
+<div class="grid">
+    {% for post in posts %}
+    <article class="card mini">
+        <div class="cardInner">
+            <div class="meta">
+                <span class="tag">{{ category.name }}</span>
+                <span>{{ post.created_at|date:"M d, Y" }}</span>
+            </div>
+            <h4 class="title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+            <p class="blurb">{{ post.excerpt|linebreaksbr }}</p>
+            <div class="cardFooter">
+                <div class="meta"></div>
+                <a class="read" href="{{ post.get_absolute_url }}">Read</a>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+{% else %}
+<p>There are no posts in this category yet.</p>
+{% endif %}
+{% endblock %}

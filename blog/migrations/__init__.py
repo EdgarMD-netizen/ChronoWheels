@@ -1,0 +1,1 @@
+"""Initialize migrations package for the blog app."""

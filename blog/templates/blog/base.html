@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ChronoWheels – Exploring Automotive Evolution{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <meta name="description" content="ChronoWheels is a quirky automotive blog exploring the history of cars, safety innovations, materials science and hybrid technology.">
+    <!-- Google AdSense placeholder. Replace the following script with your own AdSense code once approved. -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_CLIENT_ID" crossorigin="anonymous"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!--
+      Revamped header, main and footer using the AutoForge style.
+
+      The sticky header contains the site brand (logo, name and tagline)
+      and a navigation bar rendered from the available categories.  Each
+      navigation link uses the "pill" class for consistent styling.  The
+      remainder of the layout (hero, sections) is defined in the page
+      templates themselves.
+    -->
+    <header>
+        <div class="wrap topbar">
+            <a class="brand" href="{% url 'blog:home' %}" aria-label="ChronoWheels Home">
+                <div class="logo" aria-hidden="true"></div>
+                <div>
+                    <h1>ChronoWheels</h1>
+                    <span>History • Safety • Materials • Hybrids</span>
+                </div>
+            </a>
+            <nav aria-label="Primary">
+                {% for cat in categories %}
+                    <a class="pill" href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+                {% endfor %}
+                <a class="pill" href="{% url 'blog:home' %}">Latest</a>
+                <a class="pill" href="{% url 'blog:privacy' %}">Privacy</a>
+            </nav>
+        </div>
+    </header>
+    <main id="content" class="wrap">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="wrap">
+            <div class="footGrid">
+                <div>
+                    <b>ChronoWheels</b>
+                    <p>
+                        Built as a quirky automotive blog exploring the history of vehicles,
+                        safety innovations, materials science and hybrid technology.
+                    </p>
+                    <div class="copyright">© {{ now|date:"Y" }} ChronoWheels. All rights reserved.</div>
+                </div>
+                <div class="footLinks">
+                    <b>Sections</b>
+                    {% for cat in categories %}
+                        <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>
+                    {% endfor %}
+                    <a href="{% url 'blog:home' %}">Latest</a>
+                </div>
+                <div class="footLinks">
+                    <b>Site</b>
+                    <a href="{% url 'blog:privacy' %}">Privacy &amp; cookies</a>
+                    <a href="mailto:contact@example.com">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
