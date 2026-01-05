@@ -26,11 +26,17 @@ def _common_context() -> dict[str, object]:
 
 def home(request):
     """Render the home page showing all published posts."""
-    posts = Post.objects.order_by("-created_at").first()
-    if not posts:
-        return render(request, "blog/empty.html")
+    post = Post.objects.order_by("-created_at").first()
+
+    context = {
+        "post": post,
+        **_common_context(),
+    }
     
-    return render(request, "blog/home.html", {"posts": posts})
+    if not post:
+        return render(request, "blog/empty.html", context)
+    
+    return render(request, "blog/home.html", context)
 
 
 def category_list(request, slug: str):
