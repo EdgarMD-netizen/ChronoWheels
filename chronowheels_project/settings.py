@@ -15,7 +15,7 @@ import os
 from pathlib import Path
 
 from django.core.exceptions import ImproperlyConfigured  # type: ignore
-
+import dj_database_url
 
 def get_env(key: str, default: str | None = None) -> str:
     """Retrieve environment variables and optionally provide a default.
