@@ -153,7 +153,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/stable/ref/settings/#static-files
 
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 
 # In production, STATIC_ROOT defines where collectstatic places files
 STATIC_ROOT = BASE_DIR / "staticfiles"
