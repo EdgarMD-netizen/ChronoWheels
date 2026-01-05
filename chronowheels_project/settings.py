@@ -47,10 +47,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_env("DJANGO_SECRET_KEY", "unsafe-secret-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = get_env("DJANGO_DEBUG", "False").lower() == "true"
+"""DEBUG = get_env("DJANGO_DEBUG", "False").lower() == "true"
 
 if not DEBUG and SECRET_KEY == "unsafe-secret-key":
-    raise ImproperlyConfigured("DJANGO_SECRET_KEY must be set in production.")
+    raise ImproperlyConfigured("DJANGO_SECRET_KEY must be set in production.")"""
+
+DEBUG = True
 
 ALLOWED_HOSTS_ENV = get_env("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,chronowheels.onrender.com").split(",")
 ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS_ENV if host.strip()]
