@@ -102,31 +102,21 @@ WSGI_APPLICATION = "chronowheels_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/stable/ref/settings/#databases
 
-if all(
-    get_env(name, "") for name in ["MYSQL_DATABASE", "MYSQL_USER", "MYSQL_PASSWORD", "MYSQL_HOST", "MYSQL_PORT"]
-):
-    # Configure MySQL if all required variables are present
+
+DATABASE_URL = os.environ.get("DATABASE_URL")
+if DATABASE_URL:
     DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": get_env("MYSQL_DATABASE"),
-            "USER": get_env("MYSQL_USER"),
-            "PASSWORD": get_env("MYSQL_PASSWORD"),
-            "HOST": get_env("MYSQL_HOST"),
-            "PORT": get_env("MYSQL_PORT"),
-            "OPTIONS": {
-                "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
-            },
-        }
+        "default": dj_database_url.config(conn_max_age=600, ssl_require=True)
     }
 else:
-    # Fall back to SQLite for development and testing
+    # Fallback to SQLite or old logic
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
             "NAME": BASE_DIR / "db.sqlite3",
         }
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/stable/ref/settings/#auth-password-validators
