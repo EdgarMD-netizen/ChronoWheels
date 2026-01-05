@@ -5,11 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ChronoWheels – Exploring Automotive Evolution{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/app.js'%}"></script>
     <meta name="description" content="ChronoWheels is a quirky automotive blog exploring the history of cars, safety innovations, materials science and hybrid technology.">
     <!-- Google AdSense placeholder. Replace the following script with your own AdSense code once approved. -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_CLIENT_ID" crossorigin="anonymous"></script>
-    {% block head %}{% endblock %}
+    {% block head %}<link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/app.js'%}"></script>{% endblock %}
 </head>
 <body>
     <!--
